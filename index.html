@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Earth</title>
+    <link rel="stylesheet" href="style.css">
+    <style>/* Set background color to black */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Montserrat', 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+          }
+          
+          /* Center the grid layout */
+          .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px; /* Space between columns and rows */
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+          }
+          
+          /* Left column contains vision, approach, and data sections */
+          .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+          
+          /* Section Header Styling */
+          .section-header {
+            margin-bottom: 20px;
+          }
+          
+          .section-header h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 5px;
+          }
+          
+          .horizontal-line {
+            border: none;
+            border-top: 2px solid #888;
+            width: 100%;
+            margin: 0;
+          }
+          
+          /* Widget styling */
+          .widget {
+            padding: 20px;
+            background-color: #1c1c1c;
+            border-radius: 8px;
+          }
+          
+          /* Increase font sizes for main section headers */
+          h2, h4 {
+            color: #fff;
+          }
+          
+          h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+          }
+          
+          h4 {
+            font-size: 1.4rem;
+            margin-top: 15px;
+          }
+          
+          p {
+            font-size: 1rem;
+            line-height: 1.5;
+          }
+          
+          /* Image styling */
+          img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+          }
+          
+          /* Hover effect for images in the News and Insights section */
+          .right-column .news img:hover {
+            transform: scale(1.05); /* Zoom in slightly on hover */
+          }
+          
+          /* Additional spacing adjustments */
+          .main > section {
+            margin-bottom: 20px;
+          }
+          </style>
+    
+</head>
+<body>
+   <!-- Canvas Section -->
+   <canvas id="c"></canvas>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">CarbonView </a>
+            <button class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Insights</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="grid-container">
+    
+      <!-- Left Column -->
+      <section class="left-column">
+        <div class="section-header">
+          <h1>About Carbon View</h1>
+          <hr class="horizontal-line">
+        </div>
+        <div class="vision widget">
+          <h2>Our Vision</h2>
+          <p>We make meaningful climate action faster and easier by mobilizing the global tech community to track greenhouse gas (GHG) emissions with unprecedented detail and speed and provide this data freely to the public.</p>
+          <div class="vision-graph">
+            <img src="Screenshot_2024-10-26_113427-removebg-preview.png" alt="Emissions Chart">
+          </div>
+        </div>
+  
+        <div class="section-header">
+          <h1>Our Approach</h1>
+          <hr class="horizontal-line">
+        </div>
+        <div class="approach widget">
+          <h2>How Carbon View Works</h2>
+          <p>Most human economic activities release greenhouse gases into the Earth's atmosphere. We use satellites and other remote sensing technologies to spot these emissions activities.</p>
+          <img src="Screenshot_2024-10-26_113544-removebg-preview.png" alt="Emissions Bar Chart">
+        </div>
+  
+        <div class="section-header">
+          <h1>Latest Projects</h1>
+          <hr class="horizontal-line">
+        </div>
+        <div class="data widget">
+          <h2>Data In Action</h2>
+          <p>The States and Regions Remote Sensing Project (STARRS) illustrates the value of collaboration in generating independent greenhouse gas emissions data.</p>
+          <img src="Screenshot_2024-10-26_114204-removebg-preview.png" alt="STARRS Project Graph">
+        </div>
+      </section>
+      
+      <!-- Right Column -->
+      <section class="right-column">
+        <div class="section-header">
+          <h1>News and Insights</h1>
+          <hr class="horizontal-line">
+        </div>
+        <div class="news widget">
+          <article>
+            <img src="Screenshot_2024-10-26_115225-removebg-preview.png" alt="Steel Emissions">
+            <h4>Insight Brief: Steel Emissions</h4>
+            <p>We dig into some of the latest Climate TRACE data and emissions estimates to demonstrate...</p>
+          </article>
+          <article>
+            <img src="Screenshot_2024-10-26_115234-removebg-preview.png" alt="RPL Jamnagar">
+            <h4>RPL Jamnagar: The World's Largest Oil Refinery</h4>
+            <p>In this edition of Views From Above, we spotlight India's RPL Jamnagar Refinery...</p>
+          </article>
+          <article>
+            <img src="Screenshot_2024-10-26_115243-removebg-preview.png" alt="MSC Shipping Company">
+            <h4>How MSC Became The World's Largest Container Shipping Company</h4>
+            <p>Today, MSC is the world’s largest container shipping company...</p>
+          </article>
+        </div>
+      </section>
+  
+    </main>
+  
+    
+ 
+
+   
+    
+
+    
+    <script src="three.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
